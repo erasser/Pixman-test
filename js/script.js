@@ -25,8 +25,10 @@ $(() => {
     $link.on('mouseenter', (event) => animateHover(event.target))
 });
 
-window.onresize = () =>
-    animateHover(lastHovered, 0);
+window.onresize = () => {
+    if (lastHovered)
+        animateHover(lastHovered, 0);
+}
 
 // Menu items hover effect
 let lastHovered;
