@@ -81,7 +81,7 @@ a {
   color: #e84e0e;
 }
 #main-carousel .main-carousel__slide-container {
-  padding: 50px 280px;
+  padding: 50px 15%;
 }
 #main-carousel .main-carousel__slide-container h1 {
   text-shadow: 1px 2px 3px #777;
@@ -135,7 +135,7 @@ a {
 
 .main-content-wrapper {
   background: #f2f2f2;
-  padding: 40px 212px;
+  padding: 40px 15%;
 }
 .main-content-wrapper .common-container {
   margin-bottom: 90px;
