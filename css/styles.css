@@ -18,6 +18,9 @@ body h3 {
   margin-left: -2px;
   font-weight: 300;
 }
+body .tooltip-inner {
+  padding: 0 16px 4px 16px;
+}
 
 a {
   text-decoration: none;
@@ -26,10 +29,6 @@ a {
 *[data-toggle=tooltip] {
   border-bottom: dashed 2px #1aaf5e;
   cursor: default;
-}
-
-.tooltip-inner {
-  padding: 0 16px 3px 16px;
 }
 
 .highlighted-text {
@@ -50,13 +49,13 @@ a {
 }
 .header #header__main-menu {
   margin: 0;
+  padding: 0;
 }
 .header #header__main-menu-effect {
-  display: none;
   position: absolute;
   background: #1aaf5e;
-  width: 0;
-  height: 1px;
+  opacity: 0;
+  height: 2px;
 }
 .header #header__main-menu li {
   display: inline;
@@ -68,15 +67,14 @@ a {
   text-decoration: none;
 }
 .header #header__main-menu li a.active-page {
+  color: #1aaf5e;
   border-bottom: solid 3px #1aaf5e;
   animation: border-tween 0.2s;
 }
 
 #main-carousel {
-  min-height: 470px;
-  height: 470px;
-  background: url("../images/carousel_bg_1.png") no-repeat center center;
-  background-size: cover;
+  min-height: 460px;
+  height: 460px;
 }
 #main-carousel .main-carousel__arrow {
   width: 10%;
@@ -87,32 +85,48 @@ a {
 #main-carousel .main-carousel__arrow:hover {
   color: #e84e0e;
 }
-#main-carousel .main-carousel__slide-container {
-  padding: 50px 15%;
+#main-carousel .carousel-item {
+  height: 460px;
+  padding: 60px 12%;
+  font-size: 1.2rem;
 }
-#main-carousel .main-carousel__slide-container h1 {
+#main-carousel .carousel-item:nth-child(1) {
+  background: url("../images/carousel_bg_1.png") no-repeat center center;
+  background-size: cover;
+}
+#main-carousel .carousel-item:nth-child(2) {
+  background: url("../images/carousel_bg_1.png") no-repeat center center;
+  background-size: cover;
+}
+#main-carousel .carousel-item:nth-child(3) {
+  background: url("../images/carousel_bg_1.png") no-repeat center center;
+  background-size: cover;
+}
+#main-carousel .carousel-item h1 {
   text-shadow: 1px 2px 3px #777;
   margin-bottom: 26px;
 }
-#main-carousel .main-carousel__slide-container .main-carousel__content-container {
-  width: 60%;
+#main-carousel .carousel-item .main-carousel__content-container {
+  width: 66%;
+  line-height: 1.2;
 }
-#main-carousel .main-carousel__slide-container .main-carousel__link-more {
+#main-carousel .carousel-item .main-carousel__link-more {
+  position: absolute;
+  right: 12%;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: solid 1px #1aaf5e;
   background: #fff;
   border-radius: 24px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
+  width: 220px;
   height: 48px;
-  float: right;
   color: #1aaf5e;
   font-weight: bold;
-  margin-top: 20px;
 }
-#main-carousel .main-carousel__slide-container .main-carousel__link-more:hover {
+#main-carousel .carousel-item .main-carousel__link-more:hover {
   color: #e84e0e;
   border-color: #e84e0e;
   font-weight: normal;
@@ -142,10 +156,14 @@ a {
 
 .main-content-wrapper {
   background: #f2f2f2;
-  padding: 40px 15%;
+  padding: 30px 12%;
+}
+.main-content-wrapper h2,
+.main-content-wrapper h3 {
+  margin-bottom: 16px;
 }
 .main-content-wrapper .common-container {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 .main-content-wrapper .common-container p {
   text-align: justify;
@@ -156,11 +174,11 @@ a {
   width: 250px;
 }
 .main-content-wrapper .common-container-two-columns {
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   column-count: 2;
-  column-gap: 7.5%;
+  column-gap: 6%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
   .main-content-wrapper .common-container-two-columns {
     column-count: 1;
   }

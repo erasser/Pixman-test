@@ -1,15 +1,13 @@
 $(() => {
 
     // Initialize tooltips
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 
 
-    // Temporary JS to fake actually active page
+    // Fakes actually active page
     let $link = $('.header #header__main-menu li a');
 
-    let initialPageIndex = 1;
-
-    $($link[initialPageIndex]).addClass('active-page');
+    $($link[1]).addClass('active-page');
 
     $link.on('click', (event) => {
 
@@ -20,31 +18,42 @@ $(() => {
         $(event.target).addClass('active-page');
     });
 
-    $('#header__main-menu-effect').css('display', 'block');
 
-    $link.on('mouseenter', (event) => animateHover(event.target))
+    // Initialize menu items hover effect
+    $effectElement = $('#header__main-menu-effect');
+
+    $('#header__main-menu').on('mouseleave', () => {
+        $effectElement.stop().animate({
+            opacity: 0
+        }, 300, 'swing');
+    });
+
+    $link.on('mouseenter', (event) => animateHover(event.target));
 });
 
-window.onresize = () => {
-    if (lastHovered)
-        animateHover(lastHovered, 0);
-}
+window.onresize = () => $effectElement.css('opacity', 0);
+
 
 // Menu items hover effect
-let lastHovered;
-function animateHover(element, duration) {
-    duration = duration === undefined ? 400 : duration;
+let $effectElement;
+function animateHover(element) {
+    let duration;
+
+    if ($effectElement.css('opacity') < .4) {
+        $effectElement.css('opacity', .4);
+        duration = 0;
+    }
+    else
+        duration = 400;
+
     let rect = element.getBoundingClientRect();
     let y = document.getElementById('header__main-menu').getBoundingClientRect();
 
-    $('#header__main-menu-effect').stop().animate({
+    $effectElement.stop().animate({
         left:  rect.left,
-        // top:   rect.bottom - 1,
-        top:   y,
+        top:   y * 2,
         width: rect.right - rect.left
     }, duration);
-
-    lastHovered = element;
 }
 
 
