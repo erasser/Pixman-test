@@ -16,6 +16,7 @@ html
 
 body
   margin: 0
+  min-width: 960px
 
 h1,
 h2,
@@ -50,7 +51,7 @@ a
 
   #header__main-menu li
     display: inline
-    padding: 10px 11px
+    padding: 10px 9px
     font-size: 1.1rem
 
   #header__main-menu li a
@@ -149,7 +150,11 @@ a
   .common-container-two-columns
     margin-bottom: $common-container-margin-bottom
     column-count: 2
-    column-gap: 80px
+    column-gap: $page-left-right-padding / 2
+
+  @media screen and (max-width: 1200px)
+    .common-container-two-columns
+      column-count: 1
 
 .footer
   height: 140px
