@@ -11,13 +11,12 @@ body {
   margin: 0;
   min-width: 960px;
 }
-
-h1,
-h2,
-h3 {
+body h1,
+body h2,
+body h3 {
   text-align: left;
   margin-left: -2px;
-  font-weight: 300 !important;
+  font-weight: 300;
 }
 
 a {
@@ -27,6 +26,10 @@ a {
 *[data-toggle=tooltip] {
   border-bottom: dashed 2px #1aaf5e;
   cursor: default;
+}
+
+.tooltip-inner {
+  padding: 0 16px 3px 16px;
 }
 
 .highlighted-text {
