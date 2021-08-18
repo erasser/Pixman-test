@@ -1,4 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&display=swap&subset=latin-ext);
+@keyframes border-tween {
+  from {
+    border-bottom-width: 0;
+  }
+  to {
+    border-bottom-width: 3px;
+  }
+}
 html {
   padding: 0;
   margin: 0;
@@ -64,6 +72,7 @@ a {
 .header #header__main-menu li a.active-page {
   color: #1aaf5e;
   border-bottom: solid 3px #1aaf5e;
+  animation: border-tween 0.2s;
 }
 
 #main-carousel {

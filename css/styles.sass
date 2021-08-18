@@ -7,6 +7,12 @@ $pixman-cool-highlighted-color: #e84e0e
 $common-container-margin-bottom: 90px
 $page-left-right-padding: 15%
 
+@keyframes border-tween
+  from
+    border-bottom-width: 0
+  to
+    border-bottom-width: 3px
+
 html
   padding: 0
   margin: 0
@@ -65,6 +71,7 @@ a
   #header__main-menu li a.active-page
     color: $pixman-cool-color
     border-bottom: solid 3px $pixman-cool-color
+    animation: border-tween .2s
 
 #main-carousel
   min-height: 470px
