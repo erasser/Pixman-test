@@ -29,6 +29,20 @@ $(() => {
     });
 
     $link.on('mouseenter', (event) => animateHover(event.target));
+
+
+    // Implements carousel accessibility
+    // Controls: left/right arrow shows previous/next slide, P key pauses auto-cycling
+    $('body').on('keydown', (event) => {
+        if (event.target.localName !== 'body')
+            return;
+        if (event.key === 'ArrowLeft')
+            $('a[data-slide="prev"]').trigger('click');
+        if (event.key === 'ArrowRight')
+            $('a[data-slide="next"]').trigger('click');
+        if (event.key === 'p' || event.key === 'P')
+            $('#main-carousel').carousel('pause');
+    });
 });
 
 window.onresize = () => $effectElement.css('opacity', 0);

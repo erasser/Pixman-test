@@ -85,6 +85,9 @@ a {
 #main-carousel .main-carousel__arrow:hover {
   color: #e84e0e;
 }
+#main-carousel .main-carousel__arrow:focus {
+  border: solid 2px black;
+}
 #main-carousel .carousel-item {
   height: 460px;
   padding: 60px 12%;
