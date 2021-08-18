@@ -1,12 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700&display=swap&subset=latin-ext);
-@keyframes border-tween {
-  from {
-    border-bottom-width: 0;
-  }
-  to {
-    border-bottom-width: 3px;
-  }
-}
 html {
   padding: 0;
   margin: 0;
@@ -56,6 +48,13 @@ a {
 .header #header__main-menu {
   margin: 0;
 }
+.header #header__main-menu-effect {
+  display: none;
+  position: absolute;
+  background: #1aaf5e;
+  width: 0;
+  height: 1px;
+}
 .header #header__main-menu li {
   display: inline;
   padding: 10px 9px;
@@ -65,12 +64,7 @@ a {
   color: #000;
   text-decoration: none;
 }
-.header #header__main-menu li a:hover {
-  color: #1aaf5e;
-  border-bottom: solid 1px #1aaf5e;
-}
 .header #header__main-menu li a.active-page {
-  color: #1aaf5e;
   border-bottom: solid 3px #1aaf5e;
   animation: border-tween 0.2s;
 }

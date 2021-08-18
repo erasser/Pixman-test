@@ -7,12 +7,6 @@ $pixman-cool-highlighted-color: #e84e0e
 $common-container-margin-bottom: 90px
 $page-left-right-padding: 15%
 
-@keyframes border-tween
-  from
-    border-bottom-width: 0
-  to
-    border-bottom-width: 3px
-
 html
   padding: 0
   margin: 0
@@ -55,6 +49,13 @@ a
   #header__main-menu
     margin: 0
 
+  #header__main-menu-effect
+    display: none
+    position: absolute
+    background: $pixman-cool-color
+    width: 0
+    height: 1px
+
   #header__main-menu li
     display: inline
     padding: 10px 9px
@@ -64,12 +65,12 @@ a
     color: #000
     text-decoration: none
 
-  #header__main-menu li a:hover
-    color: $pixman-cool-color
-    border-bottom: solid 1px $pixman-cool-color
+  // legacy - was replaced by nicer JavaScript alternative
+  //#header__main-menu li a:hover
+    //color: $pixman-cool-color
+    //border-bottom: solid 1px $pixman-cool-color
 
   #header__main-menu li a.active-page
-    color: $pixman-cool-color
     border-bottom: solid 3px $pixman-cool-color
     animation: border-tween .2s
 
