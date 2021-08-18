@@ -66,8 +66,8 @@ a {
 }
 
 #main-carousel {
-  min-height: 450px;
-  height: 450px;
+  min-height: 470px;
+  height: 470px;
   background: url("../images/carousel_bg_1.png") no-repeat center center;
   background-size: cover;
 }
@@ -81,7 +81,7 @@ a {
   color: #e84e0e;
 }
 #main-carousel .main-carousel__slide-container {
-  padding: 60px 300px;
+  padding: 50px 280px;
 }
 #main-carousel .main-carousel__slide-container h1 {
   text-shadow: 1px 2px 3px #777;
@@ -103,7 +103,7 @@ a {
   float: right;
   color: #1aaf5e;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 #main-carousel .main-carousel__slide-container .main-carousel__link-more:hover {
   color: #e84e0e;
