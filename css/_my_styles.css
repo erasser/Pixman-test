@@ -1,0 +1,28 @@
+/* todo: html MARGIN / PADDING */
+
+body {
+    /*background: #f2f2f2;*/
+    font-family: sans-serif;  /* TODO: OpenSans */
+}
+
+#logo {
+    float: left;
+    /* TODO: :after - stop float */
+}
+
+#main_menu {
+    display: inline;
+}
+
+#carousel {
+    height: 200px;
+    background: burlywood;
+}
+
+#news {
+    padding: 10px;
+}
+
+.highlighted_text {
+    color: #1aaf5e;
+}
